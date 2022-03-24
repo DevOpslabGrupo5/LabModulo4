@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Resultado de su simulación de retiro del 10%</title>
+<style type="text/css">
+    span {
+        display: inline-block;
+        width: 200px;
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+<div align="center">
+    <h2>Resultado Simulación!!!</h2>
+    <span>El monto de su 10% es:</span><span th:text="${user.diezxciento}"></span><br/><br/>
+    <span>El Saldo de sus fondos será:</span><span th:text="${user.saldo}"></span><br/><br/>
+    <span>El impuesto a pagar por el retiro es:</span><span th:text="${user.impuesto}"></span><br/><br/>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simluador 10% - DevopsUSACH</title>
+<style>
+  h1 {color:#ff8000}
+  h3 {color:#0000ff}
+</style>
+</style>
+</head>
+<body>
+    <div align="center">
+    <h1>Simulador para calcular 10% retiro AFP</h1>
+    <h2>Solo debes ingresar el monto total acumulado en tu CCICO (Cuenta de Capitalización Individual de Cotizaciones Obligatorias) de la AFP</h2>  
+    <h2> y te entregaremos el resultado de lo que podrás obtener según la ley de retiro y el impuesto a pagar.</h2> 	
+    <form action="#" th:action="@{/register}" method="post" th:object="${user}">
+        <label>Saldo disponible en AFP:</label>
+        <input type="text" th:field="*{ahorro}" /><br/><br/>
+ 
+        <label>Sueldo:</label>
+        <input type="text" th:field="*{sueldo}" /><br/>
+  		<br/><br/>
+        <button type="submit">Consultar</button>    
+    </form>
+    <h2> ¿Cuánto dinero puedo retirar? </h2> 	
+    <h3>Puedes optar a no retirar ningún peso, pero si decides retirar va a depender del monto total ahorrado que tengas:</h3>
+	<h3>Monto mínimo a retirar es 35 UF equivalentes a $1.108.541</h3>
+	<h3>Monto máximo a retirar es 150 UF equivalentes a $4.750.890 </h3> 
+    
+    </div>
+</body>
+</html>
