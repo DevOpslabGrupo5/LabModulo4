@@ -89,15 +89,15 @@ public class Util {
      * que retorne la UF en tiempo real.  Por ejemplo mindicador.cl
      * @return
      */
-   /* public static int getUf(){
-        return 29000;
-    }*/
     public static int getUf(){
+        return 29000;
+    }
+  /* public static int getUf(){
         try {
-           /* Date date = new Date();
+           Date date = new Date();
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
             String dateStr = formatter.format(date);
-            System.out.println("Fecha actual: " + dateStr);*/
+            System.out.println("Fecha actual: " + dateStr);
             
             URL url = new URL("https://mindicador.cl/api/uf/25-03-2022");//your url i.e fetch data from .
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -128,6 +128,6 @@ public class Util {
             return 1;
         }
         return 1;
-    }
+    }*/
     
 }
