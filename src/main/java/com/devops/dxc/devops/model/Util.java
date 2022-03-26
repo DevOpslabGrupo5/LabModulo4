@@ -1,5 +1,21 @@
 package com.devops.dxc.devops.model;
 
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import net.minidev.json.JSONArray;
+import net.minidev.json.JSONObject;
+import net.minidev.json.parser.JSONParser;
+
 public class Util {
     /**
      * Método para cacular el 10% del ahorro en la AFP.  Las reglas de negocio se pueden conocer en 
@@ -73,9 +89,45 @@ public class Util {
      * que retorne la UF en tiempo real.  Por ejemplo mindicador.cl
      * @return
      */
-    public static int getUf(){
+   /* public static int getUf(){
         return 29000;
-    }
+    }*/
+    public static int getUf(){
+        try {
+           /* Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+            String dateStr = formatter.format(date);
+            System.out.println("Fecha actual: " + dateStr);*/
+            
+            URL url = new URL("https://mindicador.cl/api/uf/25-03-2022");//your url i.e fetch data from .
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("Accept", "application/json");
+            if (conn.getResponseCode() != 200) {
+                throw new RuntimeException("Failed : HTTP Error code : " + conn.getResponseCode());
+            }
+            InputStreamReader in = new InputStreamReader(conn.getInputStream());
+            BufferedReader br = new BufferedReader(in);
+            String output;
+            while ((output = br.readLine()) != null) {
+                JSONParser parser = new JSONParser(); 
+                JSONObject coderollsJSONObject = (JSONObject) parser.parse(output.toString());
+                System.out.println(output);
+               // JSONObject coderollsJSONObject = new JSONObject(output);
+               JSONArray jarray = new JSONArray();
+               jarray=(JSONArray) coderollsJSONObject.get("serie");
+                JSONObject serieJSONObject =  (JSONObject) jarray.get(0);
+                Number valorUf = (Number) serieJSONObject.getAsNumber("valor");
+               /// System.out.println("serie: "+ valorUf +"\n");
+                return valorUf.intValue();
+            }
+            conn.disconnect();
     
+        } catch (Exception e) {
+            System.out.println("Exception in NetClientGet:- " + e);
+            return 1;
+        }
+        return 1;
+    }
     
 }
