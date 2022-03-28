@@ -26,11 +26,11 @@ pipeline {
         }
        
 
-        // stage('Test Newman') {
-        //     steps {
-        //         sh "newman run src/test/ejemplo-maven.postman_collection.json  -n 10 --delay-request 1000"
-        //     }
-        // }
+        stage('Test Newman') {
+            steps {
+                sh "newman run src/test/java/com/devops/dxc/devops/postman/Dxc.postman_collectionLab.json  -n 1 --delay-request 1000"
+            }
+        }
 
         // stage('Jmeter') {
         //     steps {
