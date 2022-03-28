@@ -36,6 +36,7 @@ public class ApplicationTest {
 	// Prueba calculo donde el impuesto es 0
 	@Test
 	public void testCalcularSinImpuesto() {
+		System.out.println("testCalcularSinImpuesto");
 		driver.get("http://localhost:9000/register");
 		driver.manage().window().setSize(new Dimension(1366, 728));
 		driver.findElement(By.id("ahorro")).click();
@@ -54,6 +55,7 @@ public class ApplicationTest {
 	// Prueba calculo donde el impuesto es mayor a 0
 	@Test
 	public void testCalcularConImpuesto() {
+		System.out.println("testCalcularConImpuesto");
 		driver.get("http://localhost:9000/register");
 		driver.manage().window().setSize(new Dimension(1366, 728));
 		driver.findElement(By.id("ahorro")).click();
@@ -73,6 +75,7 @@ public class ApplicationTest {
 	// Prueba calculo donde el saldo es 0 y por lo tanto el 10% es 0
 	@Test
 	public void testCalcularSinSaldo() {
+		System.out.println("testCalcularSinSaldo");
 		driver.get("http://localhost:9000/register");
 		driver.manage().window().setSize(new Dimension(1366, 728));
 		driver.findElement(By.id("ahorro")).click();
@@ -90,6 +93,7 @@ public class ApplicationTest {
 	// Prueba calculo cuando quedara con saldo 0 despues de este retiro
 	@Test
 	public void testCalcularSinFondo() {
+		System.out.println("testCalcularSinFondo");
 		driver.get("http://localhost:9000/register");
 		driver.manage().window().setSize(new Dimension(1366, 728));
 		driver.findElement(By.id("ahorro")).click();
