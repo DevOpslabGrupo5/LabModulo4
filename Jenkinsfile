@@ -9,7 +9,7 @@ pipeline {
 
         stage('Test Unitario!') {
             steps {
-                sh "mvn -Dtest=UnitTest test"
+                sh "mvn -Dtest=UtilTest test"
             }
         }
 
