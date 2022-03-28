@@ -7,6 +7,12 @@ pipeline {
             }
         }
 
+        stage('Test Unitario!') {
+            steps {
+                sh "mvn -Dtest=UnitTest test"
+            }
+        }
+
         stage('Package') {
             steps {
                 sh "mvn package -Dmaven.test.skip"
