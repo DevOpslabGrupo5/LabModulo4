@@ -178,7 +178,7 @@ public class Util {
         int dia = fecha.get(Calendar.DAY_OF_MONTH);
 
         String FechaApi = String.valueOf(anio) + "/" + String.valueOf(mes) + "/dias/" + String.valueOf(dia);
-        System.out.println(FechaApi);
+        logger.info(FechaApi);
 
         String jasonData = plantilla.getForObject(
                 "https://api.sbif.cl/api-sbifv3/recursos_api/uf/" + FechaApi
@@ -217,7 +217,7 @@ public class Util {
             e.printStackTrace();
         }
 
-        System.out.println(valorUF_double);
+        logger.info(valorUF);
         return valorUF_double;
     }
 
