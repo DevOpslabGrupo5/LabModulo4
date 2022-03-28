@@ -18,11 +18,8 @@ import com.devops.dxc.devops.model.Util;
 @EnableAutoConfiguration
 @Controller
 public class MainController {
-<<<<<<< HEAD
      
     Logger logger = LoggerFactory.getLogger(MainController.class);
-=======
->>>>>>> b6600376837a518de7fc548fa1c5d4e1c6d3b837
 
     @GetMapping("/register")
     public String showForm(Model model) {
@@ -39,7 +36,6 @@ public class MainController {
 
     @PostMapping("/register")
     public String submitForm(@ModelAttribute("user") User user) {
-<<<<<<< HEAD
     	
         if (null!=user ){
             Util util = new Util();
@@ -56,17 +52,6 @@ public class MainController {
             return "error";
         }
        
-=======
-        System.out.println(user);
-
-        user.setDiezxciento(Util.getDxc(user.ahorro, user.sueldo));
-        user.setSaldo(user.ahorro - user.diezxciento);
-
-        /* impu=Util.getDxc(user.ahorro,user.sueldo); */
-        impu = Util.impuesto(user.sueldo);
-        user.setImpuesto(impu);
-        return "register_success";
->>>>>>> b6600376837a518de7fc548fa1c5d4e1c6d3b837
     }
 
 }

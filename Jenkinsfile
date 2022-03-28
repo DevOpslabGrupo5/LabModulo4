@@ -13,11 +13,18 @@ pipeline {
             }
         }
 
-        stage('Tutooooooo 60 segundos') {
+        stage('Tutooooooo 30 segundos') {
             steps {
-                sh 'sleep 60'
+                sh 'sleep 30'
             }
         }
+        
+        stage('Test') {
+            steps {
+                sh "mvn test"
+            }
+        }
+       
 
         // stage('Test Newman') {
         //     steps {
@@ -25,10 +32,10 @@ pipeline {
         //     }
         // }
 
-        stage('Jmeter') {
-            steps {
-                sh "mvn verify -Pperformance"
-            }
-        }
+        // stage('Jmeter') {
+        //     steps {
+        //         sh "mvn verify -Pperformance"
+        //     }
+        // }
     }
 }
