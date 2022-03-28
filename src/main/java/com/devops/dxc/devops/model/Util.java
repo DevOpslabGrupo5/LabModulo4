@@ -198,16 +198,6 @@ public class Util {
             JSONArray serieObjectList = (JSONArray) miIndicadorObject.get("UFs");
             JSONObject serieObject = (JSONObject) serieObjectList.get(0); // UF
 
-            /*
-             * valorUF = (double) Math.round((Double) serieObject.get("Valor"));
-             * /*valorUF = Double.valueOf ((String) serieObject.get("Valor"));
-             */
-            /*
-             * valorUF = Double.parseDouble((String) serieObject.get("Valor"));
-             * /*valorUF = (float) Double.parseDouble((String) serieObject.get("Valor"));
-             */
-            /* valorUF=new Float((float) serieObject.get("Valor")); */
-            /* valorUF= (double) serieObject.get("Valor"); */
             valorUF = (String) serieObject.get("Valor");
             valorUF = valorUF.replace(".", "");
             valorUF = valorUF.replace(',', '.');
