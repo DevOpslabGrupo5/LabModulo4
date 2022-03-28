@@ -3,7 +3,7 @@ package com.devops.dxc.devops;
 import static org.junit.Assert.assertTrue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -24,7 +24,7 @@ public class ApplicationTest {
 		//driver = new ChromeDriver();
 	}
 
-	@BeforeAll
+	@BeforeEach
 	public void setUp() {
 		System.out.println("Iniciando configuración...");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
@@ -32,11 +32,7 @@ public class ApplicationTest {
 		options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200", "--ignore-certificate-errors",
 				"--disable-extensions", "--no-sandbox", "--disable-dev-shm-usage");
 		driver = new ChromeDriver();
-		// driver.get("https://www.amazon.com");
 		driver.manage().window().maximize();
-		System.out.println(driver.getCurrentUrl());
-		System.out.println(driver.getTitle());
-		// driver.navigate().to("https://www.google.com");
 	}
 
 	// Prueba calculo donde el impuesto es 0
