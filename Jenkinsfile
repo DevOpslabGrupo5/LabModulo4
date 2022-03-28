@@ -25,17 +25,16 @@ pipeline {
             }
         }
        
-
         stage('Test Newman') {
             steps {
-                sh "newman run src/test/java/com/devops/dxc/devops/postman/Dxc.postman_collectionLab.json  -n 1 --delay-request 1000"
+                sh "newman run src/test/java/com/devops/dxc/devops/postman/Dxc.postman_collectionLab.json"
             }
         }
 
-        // stage('Jmeter') {
-        //     steps {
-        //         sh "mvn verify -Pperformance"
-        //     }
-        // }
+        stage('Jmeter') {
+            steps {
+                sh "mvn verify -Pperformance"
+            }
+        }
     }
 }
