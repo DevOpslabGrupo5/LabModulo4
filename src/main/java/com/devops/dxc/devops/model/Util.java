@@ -47,6 +47,7 @@ public class Util {
      * 
      */
     public int getDxc(int ahorro) throws KeyManagementException, NoSuchAlgorithmException {
+
         if (((ahorro * 0.1) / getUf()) > 150) {
             return (int) (150 * getUf());
         } else if ((ahorro * 0.1) <= 1000000 && ahorro >= 1000000) {
@@ -188,8 +189,8 @@ public class Util {
         JSONParser jsonParser = new JSONParser();
 
         Object obj;
-        double valorUF = 0;
-
+        String valorUF = "0";
+        double valorUF_double = 0;
         try {
 
             obj = jsonParser.parse(jasonData);
@@ -207,14 +208,17 @@ public class Util {
              */
             /* valorUF=new Float((float) serieObject.get("Valor")); */
             /* valorUF= (double) serieObject.get("Valor"); */
-            valorUF = DecimalFormat.getNumberInstance().parse((String) serieObject.get("Valor")).doubleValue();
+            valorUF = (String) serieObject.get("Valor");
+            valorUF = valorUF.replace(".", "");
+            valorUF = valorUF.replace(',', '.');
+            valorUF_double = Double.parseDouble(valorUF);
         } catch (Exception e) {
 
             e.printStackTrace();
         }
 
-        System.out.println(valorUF);
-        return valorUF;
+        System.out.println(valorUF_double);
+        return valorUF_double;
     }
 
 }

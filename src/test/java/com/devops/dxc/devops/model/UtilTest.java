@@ -22,17 +22,17 @@ public class UtilTest {
 
     @Test
     void testDiezxciento() {
-        assertEquals(10,useCases.diezxciento(100));
+        assertEquals(10, useCases.diezxciento(100));
     }
 
     @Test
     void testGetDxc() throws KeyManagementException, NoSuchAlgorithmException {
-        assertEquals(1000000, useCases.getDxc(1000000));
+        assertEquals(4757, useCases.getDxc(1000000));
     }
 
     @Test
     void testGetUf() throws KeyManagementException, NoSuchAlgorithmException {
-        assertTrue( useCases.getUf() > 30000);
+        assertTrue(useCases.getUf() > 30000);
     }
 
     @Test
