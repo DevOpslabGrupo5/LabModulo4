@@ -30,10 +30,10 @@ Como se indicó en el punto anterior, en nuestro proyecto se utilizó la depende
 
 ## Instalación y Ejecución
 
-Realice fork de repositorio [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Realice fork del siguiente repositorio 
 
 ```bash
-pip install foobar
+https://github.com/DevOpslabGrupo5/LabModulo4
 ```
 <h3 align="left">Connect with me:</h3>
 <p align="left">
