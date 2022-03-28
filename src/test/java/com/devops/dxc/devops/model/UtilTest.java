@@ -27,7 +27,7 @@ public class UtilTest {
 
     @Test
     void testGetDxc() throws KeyManagementException, NoSuchAlgorithmException {
-        assertEquals(4757, useCases.getDxc(1000000));
+        assertEquals(1000000, useCases.getDxc(1000000));
     }
 
     @Test
