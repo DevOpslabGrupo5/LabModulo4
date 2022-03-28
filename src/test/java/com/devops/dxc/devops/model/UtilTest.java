@@ -3,6 +3,8 @@ package com.devops.dxc.devops.model;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,12 +26,12 @@ public class UtilTest {
     }
 
     @Test
-    void testGetDxc() {
+    void testGetDxc() throws KeyManagementException, NoSuchAlgorithmException {
         assertEquals(1000000, useCases.getDxc(1000000));
     }
 
     @Test
-    void testGetUf() {
+    void testGetUf() throws KeyManagementException, NoSuchAlgorithmException {
         assertTrue( useCases.getUf() > 30000);
     }
 

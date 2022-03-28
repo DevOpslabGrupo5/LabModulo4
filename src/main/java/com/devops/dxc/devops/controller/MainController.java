@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,7 +37,7 @@ public class MainController {
     private float impu;
 
     @PostMapping("/register")
-    public String submitForm(@ModelAttribute("user") User user) {
+    public String submitForm(@ModelAttribute("user") User user) throws KeyManagementException, NoSuchAlgorithmException {
     	
         if (null!=user ){
             Util util = new Util();

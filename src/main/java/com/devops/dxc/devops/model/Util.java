@@ -1,5 +1,7 @@
 package com.devops.dxc.devops.model;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -40,9 +42,11 @@ public class Util {
      *         Para aquellos que tengan un saldo en su cuenta individual menor a $1
      *         millón,
      *         podrán hacer el retiro total de fondos en una cuota.
+     * @throws NoSuchAlgorithmException
+     * @throws KeyManagementException
      * 
      */
-    public int getDxc(int ahorro){
+    public int getDxc(int ahorro) throws KeyManagementException, NoSuchAlgorithmException{
         if(((ahorro*0.1)/getUf()) > 150 ){
             return (150*getUf()) ;
         } else if((ahorro*0.1)<=1000000 && ahorro >=1000000){
@@ -98,8 +102,10 @@ public class Util {
      * que retorne la UF en tiempo real. Por ejemplo mindicador.cl
      * 
      * @return
+     * @throws NoSuchAlgorithmException
+     * @throws KeyManagementException
      */
-    public int getUf() {
+    public int getUf() throws NoSuchAlgorithmException, KeyManagementException {
 
         Date date = new Date(System.currentTimeMillis());
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
@@ -116,9 +122,8 @@ public class Util {
         
         
         RestTemplate plantilla = new RestTemplate(factory);
-
-
-        RestTemplate plantilla = new RestTemplate();
+        //RestTemplate plantilla = new RestTemplate();
+        
         String jasonData = plantilla.getForObject("https://mindicador.cl/api/uf/" + formatter.format(date),
                 String.class);
 
