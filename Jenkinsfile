@@ -3,9 +3,16 @@ pipeline {
     stages {
         stage('Clean & Install') {
             steps {
-                sh "mvn clean install"
+                sh "mvn clean compile"
             }
         }
+
+        stage('Package') {
+            steps {
+                sh "mvn package -e"
+            }
+        }
+
 
         stage('Run!!!') {
             steps {
@@ -19,6 +26,12 @@ pipeline {
             }
         }
        
+        stage('Test!') {
+            steps {
+                sh "mvn test"
+            }
+        }
+
         // stage('Test Newman') {
         //     steps {
         //         sh "newman run src/test/java/com/devops/dxc/devops/postman/Dxc.postman_collectionLab.json"
