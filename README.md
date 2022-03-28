@@ -28,9 +28,9 @@ Para la generación del proyecto nos apoyamos directamente desde https://start.s
 Frontend
 Como se indicó en el punto anterior, en nuestro proyecto se utilizó la dependencia Thymeleaf para las página web, obteniendo como resultado lo que se muestra a continuación:
 
-## Instalación
+## Instalación y Ejecución
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Realice fork de repositorio [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
 pip install foobar
