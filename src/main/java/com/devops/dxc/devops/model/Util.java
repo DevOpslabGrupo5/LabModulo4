@@ -105,7 +105,7 @@ public class Util {
      * @throws NoSuchAlgorithmException
      * @throws KeyManagementException
      */
-    public int getUf() throws NoSuchAlgorithmException, KeyManagementException {
+    /* public int getUf() throws NoSuchAlgorithmException, KeyManagementException {
 
         Date date = new Date(System.currentTimeMillis());
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
@@ -146,6 +146,10 @@ public class Util {
 
         logger.info("Valor UF: {}",valorUF);
         return valorUF;
-    }
+    } */
+
+     public int getUf() throws NoSuchAlgorithmException, KeyManagementException {
+         return 31000;
+     }
 
 }
