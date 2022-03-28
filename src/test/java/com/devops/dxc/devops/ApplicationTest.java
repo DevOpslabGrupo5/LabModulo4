@@ -21,7 +21,7 @@ public class ApplicationTest {
 	private WebDriver driver;
 
 	public void ApplicationTests() {
-		driver = new ChromeDriver();
+		//driver = new ChromeDriver();
 	}
 
 	@Before

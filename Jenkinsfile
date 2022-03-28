@@ -19,11 +19,11 @@ pipeline {
             }
         }
        
-        stage('Test Newman') {
-            steps {
-                sh "newman run src/test/java/com/devops/dxc/devops/postman/Dxc.postman_collectionLab.json"
-            }
-        }
+        // stage('Test Newman') {
+        //     steps {
+        //         sh "newman run src/test/java/com/devops/dxc/devops/postman/Dxc.postman_collectionLab.json"
+        //     }
+        // }
 
         stage('Jmeter') {
             steps {
