@@ -1,6 +1,7 @@
 package com.devops.dxc.devops;
 
 import static org.junit.Assert.assertTrue;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,17 +13,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 @SpringBootTest
 public class ApplicationTest {
 
 	Logger logger = LoggerFactory.getLogger(ApplicationTest.class);
 
 	private WebDriver driver;
-
-	public void ApplicationTests() {
-		//driver = new ChromeDriver();
-	}
 
 	@BeforeEach
 	public void setUp() {
@@ -31,8 +27,10 @@ public class ApplicationTest {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200", "--ignore-certificate-errors",
 				"--disable-extensions", "--no-sandbox", "--disable-dev-shm-usage");
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getTitle());
 	}
 
 	// Prueba calculo donde el impuesto es 0
