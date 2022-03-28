@@ -1,10 +1,34 @@
 <h1 align="center">Hello!!! 👋, We are Group5 DevOps USACH 2022</h1>
 <h3 align="center">Final Testing project lab</h3>
-# Foobar
+# Proyecto de laboratorio
 
-Foobar is a Python library for dealing with word pluralization.
+Para esto, usted deberá desarrollar un sitio web que permita realizar lo siguiente:
+Conocer el 10% que se obtendría.
+Conocer el saldo restante que quedará luego de un posible retiro.
+Conocer el impuesto asociado al retirar el monto máximo.
+Se adjuntará un microservicio que deberá utilizar y completar. Este microservicio sólo cumple con la opción de calcular el 10%. Deberá implementar lo siguiente:
 
-## Installation
+
+# Casos de negocio
+  Cálculo del impuesto
+  Cálculo del Saldo Restante.
+  Generación de clases Test en Junit para todos los casos de negocio.
+  Integración con Servicio para obtener la UF. Actualmente sólo se obtiene un
+  valor por defecto.
+
+## DESARROLLO LABORATORIO
+
+La solución a la problemática planteada fue desarrollada en Java de acuerdo a las siguientes características:
+
+Proyecto Spring Boot mvc con Maven 
+Utilizando dependencias Spring Web y Thymeleaf 
+
+Para la generación del proyecto nos apoyamos directamente desde https://start.spring.io/
+
+Frontend
+Como se indicó en el punto anterior, en nuestro proyecto se utilizó la dependencia Thymeleaf para las página web, obteniendo como resultado lo que se muestra a continuación:
+
+## Instalación
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
