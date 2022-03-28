@@ -1,31 +1,19 @@
 package com.devops.dxc.devops;
 
 import static org.junit.Assert.assertTrue;
-
-import org.springframework.boot.test.context.SpringBootTest;
-import java.util.concurrent.TimeUnit;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 
-public class ApplicationTests {
 
-	Logger logger = LoggerFactory.getLogger(ApplicationTests.class);
+public class ApplicationTest {
+
+	Logger logger = LoggerFactory.getLogger(ApplicationTest.class);
 
 	private WebDriver driver;
 

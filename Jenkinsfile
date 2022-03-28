@@ -18,12 +18,6 @@ pipeline {
                 sh 'sleep 30'
             }
         }
-        
-        stage('Test') {
-            steps {
-                sh "mvn clean test"
-            }
-        }
        
         stage('Test Newman') {
             steps {
