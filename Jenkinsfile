@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Clean & Install') {
+        stage('Clean & Compile') {
             steps {
                 sh "mvn clean compile"
             }
@@ -9,7 +9,7 @@ pipeline {
 
         stage('Package') {
             steps {
-                sh "mvn package -e"
+                sh "mvn package -Dmaven.test.skip"
             }
         }
 
