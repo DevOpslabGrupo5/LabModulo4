@@ -2,7 +2,7 @@
 <h3 align="center">Final Testing project lab</h3>
 # Proyecto de laboratorio
 
-Para esto, usted deberá desarrollar un sitio web que permita realizar lo siguiente:
+Desafío desarrollar un sitio web que permita realizar lo siguiente:
 Conocer el 10% que se obtendría.
 Conocer el saldo restante que quedará luego de un posible retiro.
 Conocer el impuesto asociado al retirar el monto máximo.
