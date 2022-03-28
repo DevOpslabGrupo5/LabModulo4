@@ -32,7 +32,7 @@ pipeline {
             }
         }
        
-        stage('Test!') {
+        stage('Test Selenium!') {
             steps {
                 sh "mvn -Dtest=ApplicationTest test"
             }
