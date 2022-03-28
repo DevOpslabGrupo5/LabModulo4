@@ -3,8 +3,8 @@ package com.devops.dxc.devops;
 import static org.junit.Assert.assertTrue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +24,7 @@ public class ApplicationTest {
 		//driver = new ChromeDriver();
 	}
 
-	@Before
+	@BeforeAll
 	public void setUp() {
 		System.out.println("Iniciando configuración...");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
