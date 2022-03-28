@@ -148,8 +148,56 @@ public class Util {
         return valorUF;
     } */
 
-     public int getUf() throws NoSuchAlgorithmException, KeyManagementException {
+     /*public int getUf() throws NoSuchAlgorithmException, KeyManagementException {
          return 31000;
-     }
+     }*/
+     public double getUf() {
+
+        /*Date date = new Date(System.currentTimeMillis());
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");*/
+
+        RestTemplate plantilla = new RestTemplate();
+       
+        /* Creación de fecha*/
+       
+        Calendar fecha = Calendar.getInstance();
+        int anio = fecha.get(Calendar.YEAR);
+        int mes = fecha.get(Calendar.MONTH) + 1;
+        int dia = fecha.get(Calendar.DAY_OF_MONTH);
+        
+        String FechaApi = String.valueOf(anio) + "/" + String.valueOf(mes) + "/dias/" + String.valueOf(dia);
+        System.out.println(FechaApi);
+        
+        String jasonData = plantilla.getForObject("https://api.sbif.cl/api-sbifv3/recursos_api/uf/" + FechaApi + "?apikey=e04d42e230ddbc2223a61417e21807727e6cb496&formato=JSON" ,
+                String.class);
+        
+        @SuppressWarnings("deprecation")
+		JSONParser jsonParser = new JSONParser();
+
+        Object obj;
+        double valorUF = 0;
+
+        try {
+        	        	
+            obj = jsonParser.parse(jasonData);
+            JSONObject miIndicadorObject = (JSONObject) obj;
+            JSONArray serieObjectList = (JSONArray) miIndicadorObject.get("UFs");
+            JSONObject serieObject = (JSONObject) serieObjectList.get(0); // UF
+
+            /*valorUF = (double) Math.round((Double) serieObject.get("Valor"));
+            /*valorUF = Double.valueOf ((String) serieObject.get("Valor"));*/	
+            /*valorUF = Double.parseDouble((String) serieObject.get("Valor"));
+            /*valorUF = (float) Double.parseDouble((String) serieObject.get("Valor"));*/
+            /*valorUF=new Float((float) serieObject.get("Valor"));*/
+            /* valorUF= (double) serieObject.get("Valor");*/
+             valorUF=DecimalFormat.getNumberInstance().parse((String) serieObject.get("Valor")).doubleValue();
+            } catch (Exception e) {
+
+            e.printStackTrace();
+        }
+
+        System.out.println(valorUF);
+        return valorUF;
+    }
 
 }
