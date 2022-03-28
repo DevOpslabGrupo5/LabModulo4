@@ -1,6 +1,16 @@
-<h1 align="center">Hi 👋, We are Group5 DevOps USACH 2022</h1>
-<h3 align="center">Testing project lab</h3>
+<h1 align="center">Hello!!! 👋, We are Group5 DevOps USACH 2022</h1>
+<h3 align="center">Final Testing project lab</h3>
+# Foobar
 
+Foobar is a Python library for dealing with word pluralization.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install foobar
+```
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
