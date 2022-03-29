@@ -1,5 +1,7 @@
 package com.devops.dxc.devops.rest;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import com.devops.dxc.devops.model.Dxc;
@@ -17,7 +19,7 @@ public class RestData {
 	private final static Logger LOGGER = Logger.getLogger("devops.subnivel.Control");
 
 	@GetMapping(path = "/dxc", produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody Dxc getData(@RequestParam(name = "sueldo") String sueldo, @RequestParam(name = "ahorro") String ahorro){
+	public @ResponseBody Dxc getData(@RequestParam(name = "sueldo") String sueldo, @RequestParam(name = "ahorro") String ahorro) throws KeyManagementException, NumberFormatException, NoSuchAlgorithmException{
 		
 		LOGGER.log(Level.INFO, "< Trabajo DevOps - DXC > <Consultado Diez por ciento>");
 		

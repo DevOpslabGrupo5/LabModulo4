@@ -1,5 +1,82 @@
-<h1 align="center">Hi 👋, We are Group5 DevOps USACH 2022</h1>
-<h3 align="center">Testing project lab</h3>
+<h1 align="center">Hello!!! 👋, We are Group5 DevOps USACH 2022</h1>
+<h3 align="center">Final Testing project lab</h3>
+# Proyecto de laboratorio
+
+Desafío desarrollar un sitio web que permita realizar lo siguiente:
+Conocer el 10% que se obtendría.
+Conocer el saldo restante que quedará luego de un posible retiro.
+Conocer el impuesto asociado al retirar el monto máximo.
+Se adjuntará un microservicio que deberá utilizar y completar. Este microservicio sólo cumple con la opción de calcular el 10%. Deberá implementar lo siguiente:
+
+
+# Casos de negocio
+  Cálculo del impuesto
+  Cálculo del Saldo Restante.
+  Generación de clases Test en Junit para todos los casos de negocio.
+  Integración con Servicio para obtener la UF. Actualmente sólo se obtiene un
+  valor por defecto.
+
+## DESARROLLO LABORATORIO
+
+La solución a la problemática planteada fue desarrollada en Java de acuerdo a las siguientes características:
+
+Proyecto Spring Boot mvc con Maven 
+Utilizando dependencias Spring Web y Thymeleaf 
+
+Para la generación del proyecto nos apoyamos directamente desde https://start.spring.io/
+
+Frontend
+Como se indicó en el punto anterior, en nuestro proyecto se utilizó la dependencia Thymeleaf para las página web, obteniendo como resultado lo que se muestra a continuación:
+
+## Instalación y Ejecución
+
+Realice fork del siguiente repositorio 
+
+```bash
+https://github.com/DevOpslabGrupo5/LabModulo4
+```
+
+Ejecutar el proyecto con Maven
+
+```bash
+mvn clean compile
+```
+
+Realizar pruebas unitarias
+
+```bash
+mvn -Dtest=UtilTest test
+```
+
+Levantar aplicación
+
+```bash
+mvn spring-boot:run &
+```
+
+Levantar aplicación
+
+```bash
+mvn spring-boot:run &
+```
+
+Test Selenium
+
+```bash
+mvn -Dtest=ApplicationTest test
+```
+
+Test Newman
+
+```bash
+newman run src/test/postman/Dxc.postman_collectionLab.json
+```
+
+Test Jmeter
+
+```bash
+mvn verify -Pperformance
+```     
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

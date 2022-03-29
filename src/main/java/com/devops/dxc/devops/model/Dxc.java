@@ -1,6 +1,8 @@
 package com.devops.dxc.devops.model;
 
 import java.io.Serializable;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 
 public class Dxc implements Serializable{
 
@@ -9,26 +11,28 @@ public class Dxc implements Serializable{
 	 */
 	private static final long serialVersionUID = -2988002029080131424L;
 	
-	@SuppressWarnings("unused")
 	private int dxc;
 	private int saldo;
 	private Float impuesto;
 	private int sueldo;
 	private int ahorro;
 
-	public Dxc(int ahorro, int sueldo){
+	public Dxc(int ahorro, int sueldo) throws KeyManagementException, NoSuchAlgorithmException{
+
+		Util util = new Util();
+
 		this.ahorro = ahorro;
 		this.sueldo = sueldo;
-		this.impuesto=Util.impuesto(sueldo);
-		this.dxc=Util.getDxc(ahorro, sueldo);
-		this.saldo= ahorro - Util.getDxc(ahorro, sueldo);
+		this.impuesto=util.impuesto(sueldo);
+		this.dxc=util.getDxc(ahorro);
+		this.saldo= ahorro - util.getDxc(ahorro);
 	}
 
 	public Dxc() {
 	}
 
-	public int getDxc() {
-		return Util.getDxc(ahorro,sueldo);
+	public int getDxc() throws KeyManagementException, NoSuchAlgorithmException {
+		return new Util().getDxc(ahorro);
 	}
 	public void setDxc(int dxc) {
 		this.dxc = dxc;

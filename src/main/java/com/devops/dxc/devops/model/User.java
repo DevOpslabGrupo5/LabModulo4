@@ -1,16 +1,11 @@
 package com.devops.dxc.devops.model;
 
-import java.sql.Date;
-
-@SuppressWarnings("unused")
 public class User {
-  
-
     
-    public float impuesto;
-    public int sueldo;
-    public int ahorro;
-    public int diezxciento;
+    private float impuesto;
+    private int sueldo;
+    private int ahorro;
+    private int diezxciento;
     
     public int getDiezxciento() {
 		return diezxciento;
@@ -54,7 +49,12 @@ public class User {
 		this.impuesto = impu;
 	}
 
-	     
-    // override toString()
- 
+	@Override
+	public String toString() {
+		return "User [ahorro=" + ahorro + ", diezxciento=" + diezxciento + ", impuesto=" + impuesto + ", saldo=" + saldo
+				+ ", sueldo=" + sueldo + "]";
+	}
+
+
+	
 }

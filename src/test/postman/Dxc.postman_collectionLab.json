@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "21949a61-803e-4fde-9669-b89ec760dc5c",
+		"name": "Dxc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dxc",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Diez x Ciento\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson.ahorro).to.eql(85000000);",
+							"  pm.expect(responseJson.dxc).to.above(4000000);",
+							"});",
+							"",
+							"pm.test(\"Impuesto es 0.35\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson.impuesto).to.eql(0.135);",
+							"});",
+							"",
+							"pm.test(\"Se incluye como resultado campo impuesto\", () => {",
+							"  const responseJson = pm.response.json();",
+							"     pm.expect(pm.response.text()).to.include(\"impuesto\");",
+							"});",
+							"",
+							"pm.test(\"Se incluye como resultado campo saldo ahorro\", () => {",
+							"  const responseJson = pm.response.json();",
+							"     pm.expect(pm.response.text()).to.include(\"ahorro\");",
+							"});",
+							"pm.test(\"Response time is less than 30000ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(30000);",
+							"});",
+							"",
+							"pm.test(\"Codigo de estado 200\", () => {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/rest/msdxc/dxc?ahorro=85000000&sueldo=2500000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"rest",
+						"msdxc",
+						"dxc"
+					],
+					"query": [
+						{
+							"key": "ahorro",
+							"value": "85000000"
+						},
+						{
+							"key": "sueldo",
+							"value": "2500000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
