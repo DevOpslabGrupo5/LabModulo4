@@ -54,12 +54,6 @@ Levantar aplicación
 mvn spring-boot:run &
 ```
 
-Levantar aplicación
-
-```bash
-mvn spring-boot:run &
-```
-
 Test Selenium
 
 ```bash
