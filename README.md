@@ -73,9 +73,16 @@ mvn verify -Pperformance
 ```     
 
 ## Ejecucion de Pipeline
+
 ```bash
 Crear pipeline jenkinsfile utilizando la rama main
 ```     
+## Consideraciones
+
+```bash
+Para las prueba de Selenium se require instalar Google Chrome versión 99 
+```     
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
