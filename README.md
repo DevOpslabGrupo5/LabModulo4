@@ -28,7 +28,7 @@ Para la generación del proyecto nos apoyamos directamente desde https://start.s
 Frontend
 Como se indicó en el punto anterior, en nuestro proyecto se utilizó la dependencia Thymeleaf para las página web, obteniendo como resultado lo que se muestra a continuación:
 
-## Instalación y Ejecución
+## Instalación, Compilación y Testing
 
 Realice fork del siguiente repositorio 
 
