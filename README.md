@@ -35,6 +35,18 @@ Realice fork del siguiente repositorio
 ```bash
 https://github.com/DevOpslabGrupo5/LabModulo4
 ```
+
+Ejecutar el proyecto con Maven
+
+```bash
+mvn clean compile
+```
+
+Pruebas Unitarias
+
+```bash
+mvn -Dtest=UtilTest test
+```
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
