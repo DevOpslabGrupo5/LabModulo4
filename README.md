@@ -72,6 +72,9 @@ Test Jmeter
 mvn verify -Pperformance
 ```     
 
+## Ejecucion de Pipeline
+Crear pipeline jenkinsfile utilizando la rama main
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
