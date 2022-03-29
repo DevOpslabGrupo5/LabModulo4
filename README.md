@@ -42,11 +42,42 @@ Ejecutar el proyecto con Maven
 mvn clean compile
 ```
 
-Pruebas Unitarias
+Realizar pruebas unitarias
 
 ```bash
 mvn -Dtest=UtilTest test
 ```
+
+Levantar aplicación
+
+```bash
+mvn spring-boot:run &
+```
+
+Levantar aplicación
+
+```bash
+mvn spring-boot:run &
+```
+
+Test Selenium
+
+```bash
+mvn -Dtest=ApplicationTest test
+```
+
+Test Newman
+
+```bash
+newman run src/test/postman/Dxc.postman_collectionLab.json
+```
+
+Test Jmeter
+
+```bash
+mvn verify -Pperformance
+```     
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
