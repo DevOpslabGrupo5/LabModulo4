@@ -80,7 +80,7 @@ Crear pipeline jenkinsfile utilizando la rama main
 ## Consideraciones
 
 ```bash
-Para las prueba de Selenium se require instalar Google Chrome versión 99 
+Para las prueba de Selenium se require instalar Google Chrome versión 99 [pip](https://chromedriver.storage.googleapis.com/index.html?path=99.0.4844.51/)
 ```     
 
 <h3 align="left">Connect with me:</h3>
