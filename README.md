@@ -75,7 +75,7 @@ mvn verify -Pperformance
 ## Ejecucion de Pipeline
 
 ```bash
-Crear pipeline jenkinsfile utilizando la rama main
+Crear pipeline jenkinsfile utilizando la rama master
 ```     
 ## Consideraciones
 
